@@ -2,6 +2,8 @@ var draws=[];
 var currentPath=[];
 function setup() {
   canvas = createCanvas(1000, 600);
+  var clear = createButton('clear');
+  clear.position(900,100);
   canvas.mousePressed(start);
 }
 
@@ -37,4 +39,11 @@ function start()
 {
   currentPath=[];
   draws.push(currentPath);
+}
+function clear()
+{
+  if(clear.mousePressed)
+  {
+    draws=[];
+  }
 }
